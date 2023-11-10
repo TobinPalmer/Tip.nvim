@@ -10,6 +10,7 @@ M.config = {
   url = 'https://vtip.43z.one',
 }
 
+-- https://www.reddit.com/r/neovim/comments/17qdqkt/get_a_handy_tip_when_you_launch_neovim/
 -- setup is the initialization function for the carbon plugin
 ---@param params Tip.config
 M.setup = function(params)
@@ -29,6 +30,7 @@ vim.api.nvim_create_autocmd('VimEnter', {
           if exit_code ~= 0 then
             res = 'Error fetching tip: ' .. res
           end
+
           vim.notify(res, 2, { title = M.config.title })
         end,
       })
