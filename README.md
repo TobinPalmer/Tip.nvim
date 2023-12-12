@@ -5,6 +5,7 @@
 ![Demo](./static/demo.gif)
 
 ## Requirements
+
 - [nvim-notify](https://github.com/rcarriga/nvim-notify)
 - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 
@@ -19,6 +20,7 @@ return {
     -- Default config
     --- @type Tip.config
     require("tip").setup({
+      seconds = 2,
       title = "Tip!",
       url = "https://vtip.43z.one",
     })
