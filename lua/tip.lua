@@ -1,11 +1,13 @@
 local M = {}
 
 ---@class Tip.config
+---@field seconds number
 ---@field title string
 ---@field url string
 
 ---@type Tip.config
 M.config = {
+  seconds = 2,
   title = 'Tip!',
   url = 'https://vtip.43z.one',
 }
@@ -29,7 +31,7 @@ M.setup = function(params)
               res = 'Error fetching tip: ' .. res
             end
 
-            vim.notify(res, 2, { title = M.config.title })
+            vim.notify(res, M.config.seconds, { title = M.config.title })
           end,
         })
         :start()

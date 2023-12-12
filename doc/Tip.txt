@@ -1,8 +1,9 @@
 Tip.config                                                          *Tip.config*
 
     Fields: ~
-        {title}  (string)
-        {url}    (string)
+        {seconds} (number)
+        {title}   (string)
+        {url}     (string)
 
 
 M.config                                                              *M.config*
