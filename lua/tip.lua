@@ -31,7 +31,7 @@ M.setup = function(params)
               res = 'Error fetching tip: ' .. res
             end
 
-            vim.notify(res, M.config.seconds, { title = M.config.title })
+            pcall(vim.notify, res, M.config.seconds, { title = M.config.title })
           end,
         })
         :start()
