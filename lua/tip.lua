@@ -24,7 +24,7 @@ M.setup = function(params)
       job
         :new({
           command = 'curl',
-          args = { M.config.url },
+          args = { '-L', M.config.url },
           on_exit = function(j, exit_code)
             local res = table.concat(j:result())
             if exit_code ~= 0 then
